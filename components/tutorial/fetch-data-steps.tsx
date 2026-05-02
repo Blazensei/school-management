@@ -52,14 +52,15 @@ export default function Page() {
 export function FetchDataSteps() {
   return (
     <ol className="flex flex-col gap-6">
-      <TutorialStep title="Create some tables and insert some data">
+      <li>
+        <TutorialStep title="Create some tables and insert some data">
         <p>
           Head over to the{" "}
           <a
             href="https://supabase.com/dashboard/project/_/editor"
             className="font-bold hover:underline text-foreground/80"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Table Editor
           </a>{" "}
@@ -70,16 +71,18 @@ export function FetchDataSteps() {
             href="https://supabase.com/dashboard/project/_/sql/new"
             className="font-bold hover:underline text-foreground/80"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             SQL Editor
           </a>{" "}
           and click RUN!
         </p>
         <CodeBlock code={create} />
-      </TutorialStep>
+        </TutorialStep>
+      </li>
 
-      <TutorialStep title="Enable Row Level Security (RLS)">
+      <li>
+        <TutorialStep title="Enable Row Level Security (RLS)">
         <p>
           Supabase enables Row Level Security (RLS) by default. To query data
           from your <code>notes</code> table, you need to add a policy. You can
@@ -88,7 +91,7 @@ export function FetchDataSteps() {
             href="https://supabase.com/dashboard/project/_/editor"
             className="font-bold hover:underline text-foreground/80"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Table Editor
           </a>{" "}
@@ -97,7 +100,7 @@ export function FetchDataSteps() {
             href="https://supabase.com/dashboard/project/_/sql/new"
             className="font-bold hover:underline text-foreground/80"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             SQL Editor
           </a>
@@ -114,15 +117,17 @@ export function FetchDataSteps() {
             href="https://supabase.com/docs/guides/auth/row-level-security"
             className="font-bold hover:underline text-foreground/80"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Supabase docs
           </a>
           .
         </p>
-      </TutorialStep>
+        </TutorialStep>
+      </li>
 
-      <TutorialStep title="Query Supabase data from Next.js">
+      <li>
+        <TutorialStep title="Query Supabase data from Next.js">
         <p>
           To create a Supabase client and query data from an Async Server
           Component, create a new page.tsx file at{" "}
@@ -134,9 +139,11 @@ export function FetchDataSteps() {
         <CodeBlock code={server} />
         <p>Alternatively, you can use a Client Component.</p>
         <CodeBlock code={client} />
-      </TutorialStep>
+        </TutorialStep>
+      </li>
 
-      <TutorialStep title="Explore the Supabase UI Library">
+      <li>
+        <TutorialStep title="Explore the Supabase UI Library">
         <p>
           Head over to the{" "}
           <a
@@ -153,11 +160,14 @@ export function FetchDataSteps() {
             "npx shadcn@latest add https://supabase.com/ui/r/realtime-chat-nextjs.json"
           }
         />
-      </TutorialStep>
+        </TutorialStep>
+      </li>
 
-      <TutorialStep title="Build in a weekend and scale to millions!">
+      <li>
+        <TutorialStep title="Build in a weekend and scale to millions!">
         <p>You&apos;re ready to launch your product to the world! 🚀</p>
-      </TutorialStep>
+        </TutorialStep>
+      </li>
     </ol>
   );
 }
